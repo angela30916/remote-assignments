@@ -16,7 +16,7 @@ body {
     padding-top: 48px;
 }
 
-ul {
+.main-nav {
   display: none;
 }
 
@@ -29,6 +29,14 @@ p {
 
 a {
     text-decoration: none;
+}
+
+.btn {
+    background: #add8e6;
+    padding: 1em;
+    border: none;
+    margin: 20px;
+    display: flex;
 }
 
 /* ================================= 
@@ -49,8 +57,26 @@ a {
     padding: 0 20px;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.hidden-nav a:hover {
     color: #778899;
+}
+
+.hidden-nav {
+    width: 40vw;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.hidden-nav ul {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    line-height: 3em;
 }
 
 /* ---- Layout Containers ---- */
@@ -87,11 +113,9 @@ a {
     margin: 10px auto;
     color: #000;
 }
-
-.btn {
+.hidden {
     display: none;
 }
-
 /* ================================= 
   Media Queries
 ==================================== */
@@ -106,14 +130,6 @@ a {
     .item {
         flex: 1 50%;
         margin: 10px;
-    }
-
-    .btn {
-        background: #add8e6;
-        padding: 1em;
-        border: none;
-        margin: 20px;
-        display: flex;
     }
 }
 
@@ -130,6 +146,8 @@ a {
 
     .main-nav {
         margin: 8px;
+        list-style: none;
+        flex-direction: row;
     }
 
     .main-header {
@@ -149,20 +167,8 @@ a {
         margin: 10px;
     }
 
-    ul {
-        list-style: none;
-        flex-direction: row;
-    }
-
-    img {
+    img,
+    .hidden-nav {
         display: none
-    }
-
-    .btn {
-        background: #add8e6;
-        padding: 1em;
-        border: none;
-        margin: 20px;
-        display: flex;
     }
 }
