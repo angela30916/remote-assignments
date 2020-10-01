@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    title My Name
+  body
+  if name
+    h1 Welcome, #{name}!
+  else
+    h1 Hello!
+    form(action='/trackName' method='GET')
+      label Please enter your name: 
+      input(type='text' name='name')
+      br
+      br
+      input(type='submit' value='Submit')
