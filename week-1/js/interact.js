@@ -6,7 +6,7 @@ const banner = document.querySelector(".banner");
 const bannerText = banner.firstElementChild;
 
 banner.addEventListener('click', () => {
-	bannerText.textContent = "Hava a Good Time!";
+	bannerText.textContent = "Have a Good Time!";
 });
 
 /*
