@@ -1,0 +1,184 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.3;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 48px;
+}
+
+.main-nav {
+  display: none;
+}
+
+h1,
+h2,
+a ,
+p {
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    background: #add8e6;
+    padding: 1em;
+    border: none;
+    margin: 20px;
+    display: flex;
+}
+
+#menu {
+    float: right;
+    margin-right: 25px;
+}
+
+#exit {
+    float: right;
+    margin-right: 5px;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+    margin-left: 25px;
+    line-height: 2em;
+    display: inline;
+}
+
+.name a,
+.main-nav a {
+    font-size: .95em;
+    padding: 0 20px;
+}
+
+.main-nav a:hover,
+.hidden-nav a:hover {
+    color: #778899;
+}
+
+.hidden-nav {
+    width: 40vw;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.hidden-nav ul {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    line-height: 3em;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+    padding: .5em 0;
+    background: #dcdcdc;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.banner {
+    text-align: center;
+    background: #add8e6;
+    padding: 3em;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.item {
+    background: #778899;
+    height: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    color: #000;
+}
+.hidden {
+    display: none;
+}
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 500px) {
+    .row {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .item {
+        flex: 1 50%;
+        margin: 10px;
+    }
+}
+
+@media (min-width: 800px) {
+    .main-header,
+    .main-nav {
+        display: flex;
+    }
+
+    .name {
+        margin: 0 auto;
+        margin-left: 25px;
+    }
+
+    .main-nav {
+        margin: 8px;
+        list-style: none;
+        flex-direction: row;
+    }
+
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 48px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .item {
+        flex: 1 50%;
+        margin: 10px;
+    }
+
+    img,
+    .hidden-nav {
+        display: none
+    }
+}
